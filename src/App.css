@@ -1,0 +1,32 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    'form header header header'
+    'form body body body'
+    'form body body body'
+    'form body body body';
+  min-height: 100svh;
+}
+
+.form-container {
+  grid-area: form;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: body;
+}

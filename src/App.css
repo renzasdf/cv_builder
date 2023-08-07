@@ -1,6 +1,6 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
-@tailwind utilities; */
+@tailwind utilities;
 
 * {
   padding: 0;
@@ -15,16 +15,24 @@
     'form header header header'
     'form body body body'
     'form body body body'
+    'form body body body'
+    'form body body body'
+    'form body body body'
     'form body body body';
   min-height: 100svh;
 }
 
 .form-container {
   grid-area: form;
-}
+  background-color: #eeeeee;
+  display: grid;
+  grid-template-columns: 1fr;
 
-header {
-  grid-area: header;
+  & .personal-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
 }
 
 main {

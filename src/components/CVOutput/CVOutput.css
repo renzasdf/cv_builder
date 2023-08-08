@@ -3,6 +3,9 @@ header {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+  max-height: 200px;
+  background-color: #61677a;
+  color: #fff;
 }
 
 .name {
@@ -14,5 +17,61 @@ header {
 .details {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 2rem;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 700;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.main-container > .education > .title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: #d8d9da;
+}
+
+.main-container > .education > .education-list {
+  display: flex;
+  gap: 15px;
+}
+
+.main-container > .education > .education-list > .col-1 {
+  flex: 1;
+}
+
+.main-container > .education > .education-list > .col-2 {
+  flex: 4;
+}
+
+/*Experience */
+
+.main-container > .experience > .title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: #d8d9da;
+}
+
+.main-container > .experience > .experience-list {
+  display: flex;
+  gap: 15px;
+}
+
+.main-container > .experience > .experience-list > .col-1 {
+  flex: 1;
+}
+
+.main-container > .experience > .experience-list > .col-2 {
+  flex: 4;
 }

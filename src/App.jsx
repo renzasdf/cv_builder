@@ -2,32 +2,42 @@ import { useState } from 'react';
 import './App.css';
 import { CVForm } from './components/CVForm/CVForm';
 import { CVOutput } from './components/CVOutput/CVOutput';
-// import { PersonalDetails } from './components/CVForm/PersonalDetails';
 
 function App() {
   const [fullDetails, setFullDetails] = useState({
-    personal: {},
+    personal: {
+      fullname: 'Renz Byron Ortiz',
+    },
     education: [],
     experience: [],
   });
 
-  function onChange(property, name, value) {
+  const onSave = (key, value) => {
     setFullDetails((prevValue) => {
       return {
         ...prevValue,
-        [property]: {
-          ...prevValue.personal,
+        [key]: [...prevValue.education, value],
+      };
+    });
+  };
+
+  const onChange = (key, name, value) => {
+    setFullDetails((prevValue) => {
+      return {
+        ...prevValue,
+        [key]: {
+          ...prevValue[key],
           [name]: value,
         },
       };
     });
-  }
+  };
 
   return (
     <>
       <div className='grid-container'>
-        <CVForm onChange={onChange} />
-        <CVOutput details={fullDetails} />
+        <CVForm onChange={onChange} onSave={onSave} />
+        <CVOutput data={fullDetails} />
       </div>
     </>
   );

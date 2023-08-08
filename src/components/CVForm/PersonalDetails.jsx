@@ -28,7 +28,7 @@ export const PersonalDetails = ({ onChange }) => {
 
         <p className=' font-medium'>Full name</p>
         <input
-          className='rounded-lg p-3 text-sm'
+          className='rounded-lg p-3 text-sm input-bg'
           type='text'
           placeholder='Full name'
           name='fullname'
@@ -38,7 +38,7 @@ export const PersonalDetails = ({ onChange }) => {
 
         <p className='font-medium'>Email</p>
         <input
-          className='rounded-lg p-3 text-sm'
+          className='rounded-lg p-3 text-sm input-bg'
           type='email'
           placeholder='Email'
           name='email'
@@ -48,7 +48,7 @@ export const PersonalDetails = ({ onChange }) => {
 
         <p className='font-medium'>Phone</p>
         <input
-          className='rounded-lg p-3 text-sm'
+          className='rounded-lg p-3 text-sm input-bg'
           type='tel'
           placeholder='Phone number'
           name='phone'
@@ -58,20 +58,13 @@ export const PersonalDetails = ({ onChange }) => {
 
         <p className='font-medium'>Address</p>
         <input
-          className='rounded-lg p-3 text-sm'
+          className='rounded-lg p-3 text-sm input-bg'
           type='text'
           placeholder='Address'
           name='address'
           value={personalDetails.address}
           onChange={handleChange}
         />
-        <div className='buttons flex justify-end'>
-          {/* <button
-            type='button'
-            className='rounded-lg p-2 bg-slate-500 hover:bg-slate-400'>
-            Save
-          </button> */}
-        </div>
       </div>
     </>
   );

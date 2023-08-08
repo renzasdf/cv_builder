@@ -4,37 +4,114 @@
 
 * {
   padding: 0;
-  margin: 0;
+  margin: 10px 0 0 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-areas:
-    'form header header header'
-    'form body body body'
-    'form body body body'
-    'form body body body'
-    'form body body body'
-    'form body body body'
-    'form body body body';
+    '. form header header header .'
+    '. form body body body .'
+    '. form body body body .'
+    '. form body body body .'
+    '. form body body body .'
+    '. form body body body .'
+    '. form body body body .';
   min-height: 100svh;
+  grid-template-rows: 200px;
 }
 
 .form-container {
   grid-area: form;
   background-color: #eeeeee;
   display: grid;
+  gap: 1rem;
   grid-template-columns: 1fr;
+  padding: 0 10px 0;
+
+  & .title {
+    background-color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 5px;
+    border-radius: 20px;
+  }
 
   & .personal-details {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    border-radius: 20px;
+    background-color: #fff;
+    margin-top: 10px;
   }
+
+  & .education {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: #fff;
+    gap: 0.25rem;
+  }
+
+  & .experience {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: #fff;
+    gap: 0.25rem;
+  }
+}
+
+.date {
+  display: flex;
+  gap: 5px;
+}
+
+.date > .start {
+  flex: 1;
+}
+
+.date > .end {
+  flex: 1;
 }
 
 main {
   grid-area: body;
+}
+
+.input-bg {
+  background-color: #eeeeee;
+}
+
+input {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Education Input Section*/
+.buttons {
+  min-height: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttons > .add-btn {
+  color: blue;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.1rem;
+}
+
+.buttons > .add-btn:hover {
+  cursor: pointer;
+  background-color: #d8d9da;
 }
